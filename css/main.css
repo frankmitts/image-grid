@@ -21,15 +21,14 @@ body {
 }
 
 img {
-  display: inline-block;
+  display: block;
   width: 320px;
-  max-height: 320px;
   float: left;
 }
 
 img:first-child {
   width: 320px;
-  max-height: 200px;
+  display: inline-block;
 }
 
 img:nth-child(2), img:nth-child(5) {
@@ -44,6 +43,7 @@ img:nth-child(2), img:nth-child(5) {
   }
 
   img:first-child {
+    display: inline-block;
     min-width: 400px;
   }
 
@@ -86,45 +86,21 @@ img:nth-child(2), img:nth-child(5) {
     line-height: 1.6;
   }
 
-  img:nth-child(2) {
-    display: none;
-  }
-
-  img:nth-child(3) {
-    width: 66.6666%;
-    max-height: none;
-  }
-
-  img:nth-child(4) {
-    max-height: none;
-  }
-}
-
-@media only screen and (min-width: 87em) {
-
-  html {
-    font-size: 140%;
-    line-height: 1.7;
-  }
-
   img:first-child {
     width: 66.6666%;
     display: inline-block;
-    max-height: 320px;
+    float: left;
   }
 
   img:nth-child(3), img:nth-child(4), img:nth-child(5) {
-    width: 33.3333%;
     display: inline-block;
+    float: left;
+    width: 33.3333%;
   }
 
   img:nth-child(2) {
     display: inline-block;
+    float: left;
     width: 33.3333%;
   }
-
-  img:nth-child(5) {
-    max-height: 489.9px;
-  }
-
 }
